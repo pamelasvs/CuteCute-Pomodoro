@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pomodoro | Foco e Organização</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <h1>Pomodoro</h1>
+        <p>Organize seu tempo. Concentre-se no que importa.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Área do cronômetro -->
+        <section class="cartao cronometro">
+            <h2>Seu tempo de foco</h2>
+
+            <div class="modos">
+                <button id="modoFoco" class="botao-modo ativo">
+                    Foco
+                </button>
+
+                <button id="modoDescanso" class="botao-modo">
+                    Descanso
+                </button>
+            </div>
+
+            <div class="relogio" id="relogio" aria-live="off">
+                25:00
+            </div>
+
+            <p id="mensagem" class="mensagem" aria-live="polite">
+                Pronto para começar?
+            </p>
+
+            <div class="controles">
+                <button id="iniciar" class="botao principal">
+                    Iniciar
+                </button>
+
+                <button id="reiniciar" class="botao secundario">
+                    Reiniciar
+                </button>
+            </div>
+        </section>
+
+        <!-- Área do bloco de notas -->
+        <section class="cartao notas">
+            <h2>Bloco de notas</h2>
+
+            <p class="descricao">
+                Anote suas tarefas, ideias e lembretes.
+            </p>
+
+            <label for="anotacoes">Suas anotações</label>
+
+            <textarea
+                id="anotacoes"
+                placeholder="O que você precisa fazer hoje?"
+                rows="10"
+            ></textarea>
+
+            <div class="rodape-notas">
+                <span id="statusSalvamento">
+                    Suas notas são salvas automaticamente.
+                </span>
+
+                <button id="limparNotas" class="botao secundario">
+                    Limpar notas
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Um passo de cada vez. ☕</p>
+    </footer>
+
+</body>
+</html>

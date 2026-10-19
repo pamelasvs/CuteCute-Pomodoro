@@ -1,0 +1,202 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f6f2;
+    color: #26352d;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.cabecalho h1 {
+    font-size: 2.4rem;
+    color: #315c45;
+    margin-bottom: 10px;
+}
+
+.cabecalho p {
+    color: #68776d;
+    line-height: 1.5;
+}
+
+/* Organização dos cartões */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cartao {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(35, 65, 45, 0.08);
+}
+
+.cartao h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+/* Cronômetro */
+.cronometro {
+    text-align: center;
+}
+
+.modos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.botao-modo {
+    background-color: #edf1ed;
+    color: #405449;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.botao-modo.ativo {
+    background-color: #315c45;
+    color: white;
+}
+
+.relogio {
+    font-size: clamp(3.5rem, 7vw, 5rem);
+    font-weight: bold;
+    color: #315c45;
+    font-variant-numeric: tabular-nums;
+    margin: 20px 0;
+}
+
+.mensagem {
+    color: #68776d;
+    min-height: 24px;
+    margin-bottom: 25px;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Botões */
+.botao {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao:hover,
+.botao-modo:hover {
+    filter: brightness(0.96);
+}
+
+.botao:active {
+    transform: scale(0.98);
+}
+
+.principal {
+    background-color: #315c45;
+    color: white;
+}
+
+.secundario {
+    background-color: #e9eee9;
+    color: #315c45;
+}
+
+/* Bloco de notas */
+.descricao {
+    color: #68776d;
+    margin-bottom: 22px;
+    line-height: 1.5;
+}
+
+.notas label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.notas textarea {
+    display: block;
+    width: 100%;
+    min-height: 230px;
+    resize: vertical;
+    padding: 15px;
+    border: 1px solid #d8e0d9;
+    border-radius: 10px;
+    background-color: #fbfcfa;
+    color: #26352d;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.6;
+    outline: none;
+}
+
+.notas textarea:focus {
+    border-color: #56876a;
+    box-shadow: 0 0 0 3px rgba(86, 135, 106, 0.12);
+}
+
+.rodape-notas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.rodape-notas span {
+    color: #68776d;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 35px;
+    color: #68776d;
+    font-size: 0.9rem;
+}
+
+/* Layout para telas menores */
+@media (max-width: 750px) {
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .cabecalho h1 {
+        font-size: 2rem;
+    }
+
+    .cartao {
+        padding: 22px;
+    }
+}
